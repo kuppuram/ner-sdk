@@ -1,0 +1,37 @@
+py -3.11 -m venv env_311
+
+ner-sdk/
+├─ pyproject.toml
+├─ README.md
+├─ LICENSE
+└─ src/
+   └─ ner_sdk/
+      ├─ __init__.py
+      ├─ labeler.py
+      ├─ io_utils.py
+      └─ cli.py
+
+
+ner-sdk/
+└─ src/ner_sdk/
+   ├─ __init__.py
+   ├─ labeler.py          ← tweak to call plugin loader
+   ├─ io_utils.py
+   ├─ cli.py              ← add --domains option
+   ├─ loader.py           ← NEW: loads YAML + optional hooks
+   ├─ resolve.py          ← NEW: resolves overlaps (priority/length)
+   └─ domains/            ← NEW: example pluggable pack
+      └─ finance/
+         ├─ patterns.yaml
+         └─ hooks.py
+		 
+
+https://github.com/kuppuram/jenkinscicd/settings#danger-zone
+
+
+https://github.com/kuppuram/Demos-and-Achievements/settings#danger-zone
+
+https://github.com/kuppuram/angular-8-custom-modal-dialog-4bnmkh/settings#danger-zone
+
+
+		 

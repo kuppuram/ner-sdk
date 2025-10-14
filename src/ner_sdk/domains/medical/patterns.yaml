@@ -1,0 +1,21 @@
+entities:
+  - name: ICD10
+    kind: regex-token
+    pattern: "^[A-TV-Z][0-9][A-Z0-9](?:\\.[A-Z0-9]{1,4})?$"
+
+  - name: DRUG
+    kind: regex-token
+    case_insensitive: true
+    pattern: "^(aspirin|paracetamol|ibuprofen|metformin|amoxicillin)$"
+
+  - name: DOSAGE
+    kind: regex-token
+    case_insensitive: true
+    pattern: "^\\d+(?:\\.\\d+)?\\s?(mg|mcg|g|ml)$"
+
+  - name: FREQUENCY
+    kind: phrase
+    phrases:
+      - "once daily"
+      - "twice daily"
+      - "every 8 hours"

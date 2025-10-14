@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: ner-sdk
+Version: 0.1.0
+Summary: Tiny SDK for rule-based NER labeling + JSON/JSONL IO
+Author-email: Your Name <you@example.com>
+License: MIT
+Project-URL: Homepage, https://example.com/ner-sdk
+Keywords: NER,NLP,dataset,BIO,JSONL
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml>=6.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+
+# ner-sdk
+
+Rule-based NER labeler + IO helpers (JSON / JSONL) with a simple CLI.
+
+## Install (local dev)
+
+```bash
+pip install -e .
+
+pip install pytest
+
+pip install pyyaml
+
+nersdk doctor
+
+nersdk doctor --domains ./packs/medical ner_sdk.domains.finance
+
+# run tests
+pytest -q
+
+# tag with core only
+nersdk tag --in raw.txt --out out.jsonl
+
+# tag with finance domain (built-in)
+nersdk tag --in raw.txt --out out.json --domains ner_sdk.domains.finance
+
+nersdk doctor --domains ner_sdk.domains.finance ner_sdk.domains.medical
+nersdk doctor --domains ner_sdk.domains.medical ner_sdk.domains.medical
+
+nersdk domains list
+nersdk domains info --domains ner_sdk.domains.finance ner_sdk.domains.medical
+nersdk tag --in raw.txt --out labeled.jsonl --domains ner_sdk.domains.finance ner_sdk.domains.medical

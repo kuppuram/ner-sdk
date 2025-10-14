@@ -1,0 +1,22 @@
+entities:
+  - name: MONEY
+    kind: regex-token
+    case_insensitive: true
+    pattern: "^(\\$|€|₹|£)?\\d+(?:[\\.,]\\d+)?$"
+
+  - name: PERCENT
+    kind: regex-token
+    pattern: "^\\d+(?:\\.\\d+)?%$"
+
+  - name: TICKER
+    kind: regex-token
+    case_insensitive: false
+    pattern: "^[A-Z]{1,5}(?:\\.[A-Z]{1,2})?$"
+
+  - name: DATE_Q
+    kind: phrase
+    phrases:
+      - "Q1"
+      - "Q2"
+      - "Q3"
+      - "Q4"

@@ -1,0 +1,10 @@
+[
+  {
+    "text": "top 10 trends for the last quarter of 2019 with 4 score",
+    "labels": "B-TOPK I-TOPK O O O B-DATE I-DATE O B-YEAR O B-SCORE O"
+  },
+  {
+    "text": "top 10 trends for the last quarter of 2019 with 4 or above score",
+    "labels": "B-TOPK I-TOPK O O O B-DATE I-DATE O B-YEAR O B-SCORE I-SCORE I-SCORE O"
+  }
+]
